@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About You, Memo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 타이틀 섹션 -->
+        <div class="title-section">
+            <h1>About You, Note</h1>
+        </div>
+
+        <!-- 프로필 섹션 -->
+        <div class="profile-section">
+            <h2>Profile</h2>
+            <div class="profile-content">
+                <div class="profile-left">
+                    <div class="profile-image">
+                        <label for="profile-upload">
+                            <div class="image-placeholder">
+                                <img id="preview" alt="프로필 이미지">
+                            </div>
+                        </label>
+                        <div class="heart-icon"></div>
+                        <input type="file" id="profile-upload" accept="image/*" hidden>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="name" placeholder="이름을 입력하세요">
+                    </div>
+                </div>
+
+                <div class="profile-right">
+                    <div class="input-group">
+                        <label for="birthdate">생년월일</label>
+                        <input type="date" id="birthdate">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="phone">전화번호</label>
+                        <input type="tel" id="phone" placeholder="전화번호를 입력하세요">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="mbti">MBTI</label>
+                        <input type="text" id="mbti" placeholder="MBTI를 입력하세요">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 메모 섹션 -->
+        <div class="memo-section">
+            <div class="category-header">
+                <h2>Memo</h2>
+                <div class="memo-controls">
+                    <input type="text" id="memo-search" placeholder="검색" class="search-input">
+                    <button id="add-category-btn" class="btn">+ 새 카테고리</button>
+                </div>
+            </div>
+            
+            <div class="categories-container" id="categories-container">
+                <div class="category" data-category-id="1">
+                    <div class="category-title">
+                        <h3>못 먹는 음식</h3>
+                        <button class="delete-category-btn">삭제</button>
+                    </div>
+                    <div class="memo-list">
+                        <div class="memo-input">
+                            <input type="text" placeholder="새로운 메모 추가">
+                        </div>
+                        <ul class="memos"></ul>
+                    </div>
+                </div>
+
+                <div class="category" data-category-id="2">
+                    <div class="category-title">
+                        <h3>잘 먹는 음식</h3>
+                        <button class="delete-category-btn">삭제</button>
+                    </div>
+                    <div class="memo-list">
+                        <div class="memo-input">
+                            <input type="text" placeholder="새로운 메모 추가">
+                        </div>
+                        <ul class="memos"></ul>
+                    </div>
+                </div>
+
+                <div class="category" data-category-id="3">
+                    <div class="category-title">
+                        <h3>반응이 좋았던 것</h3>
+                        <button class="delete-category-btn">삭제</button>
+                    </div>
+                    <div class="memo-list">
+                        <div class="memo-input">
+                            <input type="text" placeholder="새로운 메모 추가">
+                        </div>
+                        <ul class="memos"></ul>
+                    </div>
+                </div>
+
+                <div class="category" data-category-id="4">
+                    <div class="category-title">
+                        <h3>반응이 좋지 않았던 것</h3>
+                        <button class="delete-category-btn">삭제</button>
+                    </div>
+                    <div class="memo-list">
+                        <div class="memo-input">
+                            <input type="text" placeholder="새로운 메모 추가">
+                        </div>
+                        <ul class="memos"></ul>
+                    </div>
+                </div>
+
+                <div class="category" data-category-id="5">
+                    <div class="category-title">
+                        <h3>은근히 신경쓰는 것</h3>
+                        <button class="delete-category-btn">삭제</button>
+                    </div>
+                    <div class="memo-list">
+                        <div class="memo-input">
+                            <input type="text" placeholder="새로운 메모 추가">
+                        </div>
+                        <ul class="memos"></ul>
+                    </div>
+                </div>
+
+                <div class="category" data-category-id="6">
+                    <div class="category-title">
+                        <h3>옷 사이즈</h3>
+                        <button class="delete-category-btn">삭제</button>
+                    </div>
+                    <div class="memo-list">
+                        <div class="memo-input">
+                            <input type="text" placeholder="새로운 메모 추가">
+                        </div>
+                        <ul class="memos"></ul>
+                    </div>
+                </div>
+
+                <div class="category" data-category-id="7">
+                    <div class="category-title">
+                        <h3>가보고 싶어한 장소</h3>
+                        <button class="delete-category-btn">삭제</button>
+                    </div>
+                    <div class="memo-list">
+                        <div class="memo-input">
+                            <input type="text" placeholder="새로운 메모 추가">
+                        </div>
+                        <ul class="memos"></ul>
+                    </div>
+                </div>
+
+                <div class="category" data-category-id="8">
+                    <div class="category-title">
+                        <h3>견제해야 할 이성친구 목록</h3>
+                        <button class="delete-category-btn">삭제</button>
+                    </div>
+                    <div class="memo-list">
+                        <div class="memo-input">
+                            <input type="text" placeholder="새로운 메모 추가">
+                        </div>
+                        <ul class="memos"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
